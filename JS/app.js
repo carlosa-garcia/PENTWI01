@@ -7,9 +7,9 @@ function newAction () {
         $('#todo-list').append("<li>" + item + closeBtn + "</li>");
         $('#myInput').val('').focus();
         makeClickable();
-    };
+    }
     updateStatusBar();
-};
+}
 
 function makeClickable () {
     $('.todo-body li').last().click(
@@ -18,30 +18,31 @@ function makeClickable () {
             updateStatusBar();
         }
     );
-};
+}
 
 function closeBtn (el) {
     var item = el.parentElement;
     item.remove();
     updateStatusBar();
-};
+}
 
 function clearForm (el) {
+    var items
     if (el == 'checked') {
-        var items = '#todo-list li.clicked';
+        items = '#todo-list li.clicked';
     } else if (el == 'all') {
-        var items = '#todo-list li';
-    };
+        items = '#todo-list li';
+    }
 
     $(items).remove();
     updateStatusBar();
-};
+}
 
 function updateStatusBar () {
     var pending = $('#todo-list li').not('.clicked').length;
     var done = $('#todo-list li.clicked').length;
 
-    if (pending === 0 && done == 0) {
+    if (pending === 0 && done === 0) {
         $('#ntd').show();
         $('#items-pending, #items-done').hide();
     } else {
@@ -49,5 +50,5 @@ function updateStatusBar () {
         $('#done').text(done);
         $('#ntd').hide();
         $('#items-pending, #items-done').show();
-    };
-};
+    }
+}
