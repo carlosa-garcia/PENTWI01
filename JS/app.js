@@ -26,6 +26,17 @@ function closeBtn (el) {
     updateStatusBar();
 };
 
+function clearForm (el) {
+    if (el == 'checked') {
+        var items = '#todo-list li.clicked';
+    } else if (el == 'all') {
+        var items = '#todo-list li';
+    };
+
+    $(items).remove();
+    updateStatusBar();
+};
+
 function updateStatusBar () {
     var pending = $('#todo-list li').not('.clicked').length;
     var done = $('#todo-list li.clicked').length;

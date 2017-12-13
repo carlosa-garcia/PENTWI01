@@ -115,10 +115,7 @@ ul li.clicked::before {
     width: 100%;
 }
 
-.hidden {
-    display: none;
-}
-
-.invalid {
-    box-shadow: 0 0 3px #CC0000; margin: 10px
+#clearComplete, #clearAll {
+    margin-top: 20px;
+    padding: 5px;
 }
