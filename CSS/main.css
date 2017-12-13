@@ -1,0 +1,124 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    overflow-x: hidden;
+}
+
+.menu {
+    background-color: #000000;
+    color: white;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.menu li {
+    list-style: none;
+    display: inline;
+}
+
+nav {
+    height: 3em;
+}
+
+nav ul {
+    margin: 0;
+    margin-right: 30px;
+    text-align: right;
+    padding-top: 14px;
+}
+nav li {
+
+    padding: 4px;
+}
+
+.header {
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 2em;
+    text-align: center;
+    padding: 10px;
+    /*background-color: gray;*/
+}
+
+div {
+    position: relative;
+    margin-top: 0;
+    text-align: center;
+    /*background-color: green;*/
+}
+
+.todo-body ul {
+    margin: 0;
+    padding: 0;
+}
+
+.todo-body li {
+    list-style: none;
+    width: 100%;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    text-align: left;
+    padding-left: 40px;
+    transition: 0.2s;
+    border-bottom: 1px solid gray;
+}
+
+.todo-body li:hover {
+    background: #ddd;
+}
+
+li span.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding-right: 60px;
+}
+
+.clicked {
+    text-decoration: line-through;
+}
+
+ul li.clicked::before {
+    content: '';
+    position: absolute;
+    border-color: green;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 0px;
+    left: 10px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+#status-bar ul {
+    text-align: center;
+}
+
+#status-bar {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.invalid {
+    box-shadow: 0 0 3px #CC0000; margin: 10px
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf8">
+        <title>Sample App with jQuery</title>
+        <link rel="stylesheet" type="text/css" href="CSS/main.css">
+        <!-- JQuery -->
+        <script  src="JS/jquery-3.2.1.js"></script>
+        <!-- App's functions using JQuery -->
+        <script src="JS/app.js"></script>
+    </head>
+
+    <body>
+
+        <nav id="top-menu" class="menu">
+            <ul>
+                <li><a href="todolist.html">To Do</a></li>
+                <li><a href="#">What's My IP</a></li>
+                <li><a href="#">About</a></li>
+                <li>&nbsp;</li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </nav>
+        <h1 class="header">To Do List</h1>
+        <div class="todo-body">
+            <input type="text" id="myInput" placeholder="Enter action here..."></input><button onclick="newAction()">Add</button>
+            <br><br>
+            <ul id="todo-list">
+            </ul>
+        </div>
+        <nav id="status-bar" class="menu">
+            <ul>
+                <li id="items-done"><span id="done">0</span> items done</li>
+                <li id="items-pending"><span id="pending">0</span> items pending</li>
+                <li id="ntd">Nothing to see here !!!</li>
+            </ul>
+        </nav>
+
+        <script type="text/javascript">
+            $(document).ready(function (){updateStatusBar()})
+        </script>
+    </body>
+
+</html>
