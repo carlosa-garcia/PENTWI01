@@ -26,15 +26,22 @@ function closeBtn (el) {
     updateStatusBar();
 }
 
-function clearForm (el) {
+function updateForm (el) {
     var items
+    var update
+    
     if (el == 'checked') {
         items = '#todo-list li.clicked';
+        update =  $(items).remove();
     } else if (el == 'all') {
         items = '#todo-list li';
+        update =  $(items).remove();
+    } else if (el == 'mark-all') {
+        items = '#todo-list li';
+        update = $(items).toggleClass('clicked');
     }
 
-    $(items).remove();
+    update;
     updateStatusBar();
 }
 

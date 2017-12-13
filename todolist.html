@@ -28,8 +28,9 @@
             <br><br>
             <ul id="todo-list">
             </ul>
-            <button id="clearComplete" onclick="clearForm('checked')">Clear Completed</button>
-            <button id="clearAll" onclick="clearForm('all')">Clear All</button>
+            <button id="clearComplete" onclick="updateForm('checked')">Clear Completed</button>
+            <button id="clearAll" onclick="updateForm('all')">Clear All</button>
+            <button id="markAll" onclick="updateForm('mark-all')">Toggle all</button>
         </div>
         <nav id="status-bar" class="menu">
             <ul>

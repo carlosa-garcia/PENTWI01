@@ -115,7 +115,7 @@ ul li.clicked::before {
     width: 100%;
 }
 
-#clearComplete, #clearAll {
+#clearComplete, #clearAll, #markAll {
     margin-top: 20px;
     padding: 5px;
 }
