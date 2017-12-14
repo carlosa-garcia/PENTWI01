@@ -1,13 +1,38 @@
-body {
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%;
     font-family: sans-serif;
-    overflow-x: hidden;
+    background-color: #ffff66;
+}
+
+#wrapper {
+    position: relative;
+    min-height: 100%;
+}
+
+#header {
+    height: 3em;
+}
+
+#notepad {
+    text-align: center;
+}
+
+#status-bar {
+    position: absolute;
+    bottom: 0;
+    height: 2em;
+    width: 100%;
+    background-color: black;
+    text-align: center;
 }
 
 .menu {
-    background-color: #000000;
     color: white;
+    background-color: black;
+    box-sizing: border-box;
+    padding: 0.5em;
 }
 
 .menu a {
@@ -17,44 +42,21 @@ body {
 
 .menu a:hover {
     text-decoration: underline;
+    color: gray;
 }
 
+.menu ul {
+    margin: auto;
+}
 .menu li {
-    list-style: none;
     display: inline;
+    list-style: none;
+    padding-right: 10px;
 }
 
-nav {
-    height: 3em;
-}
-
-nav ul {
-    margin: 0;
-    margin-right: 30px;
+.menu ul.top-menu {
     text-align: right;
-    padding-top: 14px;
-}
-nav li {
-
-    padding: 4px;
-}
-
-.header {
-    box-sizing: border-box;
-    position: relative;
-    margin-top: 0;
-    margin-bottom: 0;
-    height: 2em;
-    text-align: center;
-    padding: 10px;
-    /*background-color: gray;*/
-}
-
-div {
-    position: relative;
-    margin-top: 0;
-    text-align: center;
-    /*background-color: green;*/
+    padding: 0.5em;
 }
 
 .todo-body ul {
@@ -64,7 +66,6 @@ div {
 
 .todo-body li {
     list-style: none;
-    width: 100%;
     position: relative;
     cursor: pointer;
     -webkit-user-select: none;
@@ -78,14 +79,14 @@ div {
 }
 
 .todo-body li:hover {
-    background: #ddd;
+    background: #ffff1a;
 }
 
 li span.close {
     position: absolute;
     right: 0;
     top: 0;
-    padding-right: 60px;
+    padding-right: 1em;
 }
 
 .clicked {
@@ -99,20 +100,10 @@ ul li.clicked::before {
     border-style: solid;
     border-width: 0 2px 2px 0;
     top: 0px;
-    left: 10px;
+    left: 1em;
     transform: rotate(45deg);
     height: 15px;
     width: 7px;
-}
-
-#status-bar ul {
-    text-align: center;
-}
-
-#status-bar {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
 }
 
 #clearComplete, #clearAll, #markAll {
