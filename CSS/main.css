@@ -16,7 +16,9 @@ html, body {
 }
 
 #notepad {
+    padding-top: 1em;
     text-align: center;
+    padding-bottom: 3em;
 }
 
 #status-bar {
@@ -28,6 +30,9 @@ html, body {
     text-align: center;
 }
 
+h1 {
+    margin: 0;
+}
 .menu {
     color: white;
     background-color: black;
