@@ -7,6 +7,7 @@ function newAction () {
         $('#todo-list').append("<li>" + item + closeBtn + "</li>");
         $('#myInput').val('').focus();
         makeClickable();
+        $('#clearAll').prop('disabled', false)
     }
     updateStatusBar();
 }
@@ -36,6 +37,7 @@ function updateForm (el) {
     } else if (el == 'all') {
         items = '#todo-list li';
         update =  $(items).remove();
+        $('#clearAll').prop('disabled', true)
     } else if (el == 'mark-all') {
         items = '#todo-list li';
         update = $(items).toggleClass('clicked');
@@ -52,10 +54,16 @@ function updateStatusBar () {
     if (pending === 0 && done === 0) {
         $('#ntd').show();
         $('#items-pending, #items-done').hide();
+        $('#clearAll').prop('disabled', true)
     } else {
         $('#pending').text(pending);
         $('#done').text(done);
         $('#ntd').hide();
         $('#items-pending, #items-done').show();
+    }
+    if ($('#todo-list li.clicked').length === 0) {
+        $('#clearComplete').prop('disabled', true)
+    } else {
+        $('#clearComplete').prop('disabled', false)
     }
 }
