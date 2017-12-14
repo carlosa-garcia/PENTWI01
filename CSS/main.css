@@ -115,3 +115,14 @@ ul li.clicked::before {
     margin-top: 20px;
     padding: 5px;
 }
+
+#geo {
+    float: right;
+    text-align: left;
+}
+
+#geo li {
+    margin-left: 0;
+    padding-left: 0;
+    font-size: 0.6em;
+}

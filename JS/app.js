@@ -30,7 +30,7 @@ function closeBtn (el) {
 function updateForm (el) {
     var items
     var update
-    
+
     if (el == 'checked') {
         items = '#todo-list li.clicked';
         update =  $(items).remove();
@@ -66,4 +66,11 @@ function updateStatusBar () {
     } else {
         $('#clearComplete').prop('disabled', false)
     }
+}
+
+function getPublicIP () {
+    $.getJSON('http://ipinfo.io/json', function (data) {
+        $('#geo').append('<li>IP: ' + data.ip + '</li>')
+        $('#geo').append('<li>City: ' + data.city + '</li>')
+    })
 }

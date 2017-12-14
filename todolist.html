@@ -18,10 +18,8 @@
             <nav id="header" class="menu">
                 <ul class="top-menu">
                     <li><a href="#">To Do List</a></li>
-                    <li><a href="#">What's My IP</a></li>
                     <li>&nbsp;</li>
                     <li>&nbsp;</li>
-                    <li><a href="#">About</a></li>
                 </ul>
             </nav>
 
@@ -36,7 +34,9 @@
             </section>
 
             <nav id="status-bar" class="menu">
-                <ul>
+                <ul id="geo">
+                </ul>
+                <ul id="status">
                     <li id="items-done"><span id="done">0</span> items done</li>
                     <li id="items-pending"><span id="pending">0</span> items pending</li>
                     <li id="ntd">Nothing to see here !!!</li>
@@ -47,6 +47,7 @@
 
         <script type="text/javascript">
             $(document).ready(function () {
+                    getPublicIP();
                     updateStatusBar();
                     $('#myInput').keypress(function (event) {
                         var keycode = (event.keyCode ? event.keyCode : event.which);
